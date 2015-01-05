@@ -60,6 +60,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 
+		@Override
+		public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+			String data = description + "&nbsp;&nbsp;&nbsp;&nbsp;<a href='" + failingUrl + "'>刷新</a>";
+			view.loadUrl("javascript:document.body.innerHTML=\"" + data + "\"");
+		}
+
 	}
 
 	@Override
