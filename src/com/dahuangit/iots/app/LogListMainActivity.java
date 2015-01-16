@@ -13,8 +13,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 @SuppressLint({ "NewApi", "JavascriptInterface" })
-public class MainActivity extends Activity {
-	private static final String TAG = MainActivity.class.getSimpleName();
+public class LogListMainActivity extends Activity {
+	private static final String TAG = LogListMainActivity.class.getSimpleName();
 
 	/** js全局变量名称: 用于从js端调用到安卓本地java方法 */
 	private static final String GLOBAL_JS_VAR_NAME = "iots";
@@ -41,8 +41,8 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 
-		// 加载需要显示的网页
-		webview.loadUrl(prop.getProperty("server.url"));
+		// 来自消息通知栏
+		webview.loadUrl(prop.getProperty("server.url.appPerceptionFunctionList"));
 
 		// 设置Web视图
 		webview.setWebViewClient(new HelloWebViewClient());
