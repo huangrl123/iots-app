@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+ "http://castor.org/mapping.dtd">
+<mapping>
+
+    <class
+        name="com.dahuangit.water.app.util.Response"
+        auto-complete="true" >
+        <map-to xml="response" />
+
+        <field
+            name="success"
+            type="boolean" />
+        
+        <field
+            name="userId"
+            type="int" />
+    </class>
+
+</mapping>
